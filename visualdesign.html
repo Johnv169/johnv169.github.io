@@ -4,6 +4,48 @@
 <meta charset="UTF-8">
 <title>Untitled Document</title>
 <style type="text/css">
+	
+	.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	
+	
+	
 	h1 {
     color: whitesmoke;
     background-color: black;
@@ -21,6 +63,28 @@
 </head>
 
 <body>
+	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="visualdesign.html">Visual art collection</a>
+  <a href="digitaldesign.html">Digital project collection</a>
+  <a href="tbd.html">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Welcome</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+	
 	<h1>Visual Design Artifacts</h1>
 	<h3>Artifact #1</h3>
 	<img  class="pictures" src="artifacts/drippedoutorange.jpg" width="200" height="205" alt=""/><br>
